@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/ooo_product_app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.AppCompat.Light"
+        app:elevation="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/customToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:background="@color/purple_200"
+            android:theme="@style/toolbarStyle"
+            android:elevation="4dp"
+            android:backgroundTint="@color/purple_200"
+            app:layout_scrollFlags="scroll|enterAlways"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light" >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:layout_height="match_parent">
+                <ImageView
+                    android:tint="@color/black"
+                    android:id="@+id/btnBackArrow"
+                    android:layout_width="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="0"
+                    android:backgroundTint="@color/black"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/ic_baseline_grid_view_24"
+                    android:layout_height="50dp"/>
+                <TextView
+                    android:id="@+id/txtToolbarTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="50dp"
+                    android:layout_marginLeft="10dp"
+                    android:textStyle="bold"
+                    android:textSize="22sp"
+                    android:layout_weight="1"
+                    android:textColor="@color/black"
+                    android:text="Explore"
+                    />
+                <RelativeLayout
+                    android:id="@+id/badge2"
+                    android:visibility="visible"
+                    android:layout_width="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:layout_height="wrap_content"
+                    >
+
+                    <RelativeLayout
+                        android:id="@+id/relative_layout1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:id="@+id/myButton1"
+                            android:layout_width="35dp"
+                            android:layout_height="30dp"
+                            android:layout_marginRight="5dp"
+                            android:tint="@color/white"
+                            android:background="@drawable/ic_baseline_shopping_bag_24" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/badge_notification_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignRight="@id/relative_layout1"
+                        android:background="@drawable/item_count"
+                        android:text=" "
+
+                        android:gravity="center"
+                        android:textColor="@color/purple_5001"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+            </LinearLayout>
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+</LinearLayout>

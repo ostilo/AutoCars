@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="150dp"
+    android:layout_height="80dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_gravity="center_horizontal"
+    android:gravity="center_horizontal"
+    android:layout_margin="@dimen/small"
+    android:orientation="vertical"
+    app:cardCornerRadius="@dimen/medium"
+    >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:background="@drawable/card_image_bg"
+        android:layout_height="match_parent">
+        <ImageView
+            android:id="@+id/scroll_image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:src="@drawable/carlogoicon"
+            android:backgroundTint="@color/purple_700"
+            />
+        <VideoView
+            android:visibility="invisible"
+            android:id="@+id/video_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/purple_700"
+            android:alpha="0.1"
+            android:orientation="vertical">
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+</androidx.cardview.widget.CardView>

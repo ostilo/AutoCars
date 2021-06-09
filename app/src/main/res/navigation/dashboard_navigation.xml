@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/dashboard_navigation"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.autocars.ui.fragments.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_carDetailsFragment"
+            app:destination="@id/carDetailsFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_carsDetial"
+            app:destination="@id/carsDetial" />
+    </fragment>
+    <fragment
+        android:id="@+id/carDetailsFragment"
+        android:name="com.example.autocars.ui.fragments.CarDetailsFragment"
+        android:label="fragment_car_details"
+        tools:layout="@layout/fragment_car_details" />
+    <fragment
+        android:id="@+id/carsDetial"
+        android:name="com.example.autocars.ui.fragments.CarsDetial"
+        android:label="CarsDetial" >
+        <action
+            android:id="@+id/action_carsDetial_to_carDetailsFragment"
+            app:destination="@id/carDetailsFragment" />
+        <action
+            android:id="@+id/action_carsDetial_to_photoViewFragment"
+            app:destination="@id/photoViewFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/favoriteFragment"
+        android:name="com.example.autocars.ui.fragments.FavoriteFragment"
+        android:label="fragment_favorite"
+        tools:layout="@layout/fragment_favorite" >
+        <action
+            android:id="@+id/action_favoriteFragment_to_carsDetial"
+            app:destination="@id/carsDetial" />
+    </fragment>
+    <fragment
+        android:id="@+id/photoViewFragment"
+        android:name="com.example.autocars.PhotoViewFragment"
+        android:label="fragment_photo_view"
+        tools:layout="@layout/fragment_photo_view" />
+</navigation>

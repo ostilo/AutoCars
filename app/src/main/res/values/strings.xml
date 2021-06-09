@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">AutoCheck</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="label_error">Something went wrong, Please try again.</string>
+    <string name="button_retry">Retry</string>
+    <string name="naira">\u20a6</string>
+    <string name="about_app">Bringing you closer to the car you love to ride</string>
+    <string name="profile">Profile</string>
+    <string name="about">About</string>
+    <string name="card_key">carDetailsKey</string>
+    <string name="card_key_photo">carDetailsKeyPhoto</string>
+    <string name="welcome">Welcome</string>
+    <string name="internet">Check your internet connection</string>
+    <string name="search_car">searchKey</string>
+    <string name="favor">Favorites</string>
+    <string name="delete_from">Delete from Favorite</string>
+    <string name="messenger_key">SearchFavMessenger</string>
+    <string name="cart_sucess">Car Successfully Added to Cart</string>
+    <string name="fav_string">No favorite added yet</string>
+    <string name="no_data_yet">No data yet, swipe down to refresh</string>
+</resources>

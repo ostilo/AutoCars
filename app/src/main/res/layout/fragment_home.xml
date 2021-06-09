@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.fragments.HomeFragment">
+
+    <include
+        layout="@layout/custom_tollbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+         />
+    <ProgressBar
+        android:id="@+id/progress_load"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_gravity="center_horizontal"
+        style="?android:attr/progressBarStyle"
+        android:layout_height="match_parent">
+
+    </ProgressBar>
+
+    <LinearLayout
+        android:id="@+id/noLayoutRecord"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="vertical"
+        >
+        <net.steamcrafted.materialiconlib.MaterialIconView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginBottom="8dp"
+            app:materialIcon="information"
+            app:materialIconColor="@color/black" />
+
+        <TextView
+            style="@style/BoldText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/no_data_yet"
+            android:textColor="@color/black" />
+    </LinearLayout>
+
+   <LinearLayout
+       android:id="@+id/main_parent_home"
+       android:layout_width="match_parent"
+       android:orientation="vertical"
+       android:padding="@dimen/medium"
+       android:visibility="gone"
+       android:layout_height="wrap_content">
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:orientation="horizontal"
+           android:layout_height="wrap_content">
+           <EditText
+               android:layout_marginLeft="@dimen/small"
+               android:layout_marginRight="@dimen/small"
+               android:id="@+id/searchRef"
+               android:layout_marginTop="@dimen/small"
+               android:layout_weight="1"
+               android:layout_width="match_parent"
+               android:hint="Search by state"
+               android:maxLines="1"
+               android:singleLine="true"
+               android:background="@drawable/search_bg"
+               android:drawableTint="@android:color/darker_gray"
+               android:drawableLeft="@android:drawable/ic_menu_search"
+               android:drawablePadding="@dimen/fab_margin"
+               android:layout_height="wrap_content" />
+           <ImageView
+               android:id="@+id/search_img"
+               android:layout_width="50dp"
+               android:backgroundTint="@android:color/transparent"
+               android:src="@drawable/search"
+               android:layout_height="50dp"/>
+
+       </LinearLayout>
+       <LinearLayout
+           android:layout_marginTop="@dimen/fab_margin"
+           android:layout_width="match_parent"
+           android:id="@+id/image_linear_parent"
+           android:layout_height="wrap_content">
+           <androidx.recyclerview.widget.RecyclerView
+               android:layout_width="match_parent"
+               android:id="@+id/addImageScrollView"
+               android:orientation="horizontal"
+               android:layout_height="wrap_content"
+               app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+               tools:listitem="@layout/cars_item_list"
+               />
+       </LinearLayout>
+       <LinearLayout
+           android:layout_marginTop="@dimen/fab_margin"
+           android:layout_width="match_parent"
+           android:id="@+id/image_linear_card_parent"
+           android:layout_height="wrap_content">
+           <androidx.recyclerview.widget.RecyclerView
+               android:layout_width="match_parent"
+               android:id="@+id/addImageScrollView_card"
+               android:orientation="vertical"
+               android:layout_height="wrap_content"
+               app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+               tools:listitem="@layout/full_cars_item_card"
+               />
+       </LinearLayout>
+   </LinearLayout>
+
+</LinearLayout>
